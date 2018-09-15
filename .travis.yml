@@ -5,8 +5,7 @@ cache:
   directories:
     - node_modules
 script:
-  - npm test
-  - npm run build
+  - sh build/build_and_test_all.sh
 #deploy:
   #  provider: surge
   #  skip_cleanup: true
