@@ -1,0 +1,18 @@
+{
+  "name": "penmates-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "1.1.5"
+  },
+  "dependencies": {
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "echo \"No build configured yet\" && exit 0",
+    "test": "echo \"Tests are empty\" && exit 0",
+    "eject": "react-scripts eject"
+  }
+}
