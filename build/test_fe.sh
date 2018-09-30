@@ -1,2 +1,2 @@
 cd penmates-frontend
-npm test
+npm run test

@@ -1,2 +1,2 @@
 cd penmates-frontend
-npm run build
+npm run build:prod

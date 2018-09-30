@@ -2,6 +2,10 @@
   font-family: 'Open Sans Light';
   src: local('Open Sans Light'), url('./fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  src: local('Gloria Hallelujah'), url('./fonts/Gloria_Hallelujah/GloriaHallelujah.ttf') format('truetype');
+}
 
 body {
   margin: 0;
@@ -17,11 +21,18 @@ body {
 }
 
 .component.first-component {
+  flex-wrap: wrap;
   margin-top: 70px;
   align-items: center;
   background-color: white;
   justify-content: center;
   position: relative;
+  p {
+    font-family: 'Gloria Hallelujah';
+    font-size: 40;
+    text-align: center;
+    width: 40%;
+  }
 }
 
 .component.second-component {
