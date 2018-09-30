@@ -6,6 +6,10 @@
 # testing
 /coverage
 
+# compiled source
+/dist
+
+
 # production
 /build
 
