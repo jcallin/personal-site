@@ -7,16 +7,18 @@ body {
 }
 
 .component {
-    height: 100%;
-    width: 100%;
-    display: flex;
+  display: flex;
+  height: 100%;
+  width: 100%;
 }
 
 .component.first-component {
-    background-color: gray;
-    position: relative;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  position: relative;
 }
 
 .component.second-component {
-    background-color: red;
+  background-color: red;
 }
