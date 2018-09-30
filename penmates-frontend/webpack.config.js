@@ -27,22 +27,33 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
-      }],
-    },
-    resolve: {
-      extensions: ['.js', '.jsx']
-    },
-    devServer: {
-      historyApiFallback: true,
-      contentBase: './'
-    },
-    plugins: [
-      new ExtractTextPlugin({filename: 'style.css'}),
-      new HtmlWebpackPlugin({
-        inject: false,
-        hash: true,
-        template: './src/index.html',
-        filename: 'index.html'
-      })
-    ]
-  };
+      },
+      {
+          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+          use: [{
+              loader: 'file-loader',
+              options: {
+                  name: '[name].[ext]',
+                  outputPath: 'fonts/'
+              }
+          }]
+      }
+    ],
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './'
+  },
+  plugins: [
+    new ExtractTextPlugin({filename: 'style.css'}),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/index.html',
+      filename: 'index.html'
+    })
+  ]
+};
