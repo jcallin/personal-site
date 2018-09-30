@@ -45,7 +45,8 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './'
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
   },
   plugins: [
     new ExtractTextPlugin({filename: 'style.css'}),
