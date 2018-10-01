@@ -1,4 +1,4 @@
-install: yarn install
+install: cd penmates-frontend && yarn install
 language: node_js
 node_js:
   - "stable"
