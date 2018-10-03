@@ -4,6 +4,8 @@ node_js:
   - "stable"
 cache:
   yarn: true
+  directories:
+    - node_modules
 script:
   - sh build/build_and_test_all.sh
 #deploy:
