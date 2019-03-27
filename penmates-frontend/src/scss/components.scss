@@ -1,12 +1,13 @@
-@import 'variables';
+@import "variables";
 
-.landing-image-container {
+.landing-container {
   position: relative;
   text-align: center;
 }
 
-.landing {
-  z-index: map-get($z-layers, 'header');
+.landing-image {
+  overflow: hidden;
+  z-index: map-get($z-layers, "header");
 }
 
 .main-title {
@@ -14,8 +15,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;;
+  width: 100%;
   transform: translate(-50%, -50%);
   text-align: center;
-  z-index:  map-get($z-layers, 'fullscreen');
+  z-index: map-get($z-layers, "fullscreen");
 }

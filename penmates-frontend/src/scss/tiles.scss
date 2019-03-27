@@ -10,19 +10,18 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: 50%;
+  height: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
   z-index: map-get($z-layers, "fullscreen");
   font-family: "Microsoft Yahei", arial;
   font-size: 12px;
   line-height: 1.5;
-  text-align: center;
   margin: auto;
-  margin-top: 5px;
-  padding-bottom: 60px;
 }
 .albumPanel .aP-hd {
-  text-align: left;
+  text-align: center;
   color: #6d5c53;
 }
 .albumPanel .aP-hd i {
@@ -49,6 +48,7 @@
   position: relative;
   margin-left: -10px;
 }
+// Items within the album
 .albumPanel .album {
   display: block;
   overflow: hidden;
@@ -58,6 +58,7 @@
   border: none;
 }
 .albumPanel .album .a-cont,
+// First image before hover
 .albumPanel .album .a-cover {
   position: absolute;
   left: 0;

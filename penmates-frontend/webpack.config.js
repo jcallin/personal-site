@@ -1,15 +1,13 @@
 // webpack v4
-const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-  entry: [
-    './src/index.js'
-  ],
+  entry: ["./src/index.js"],
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.js"
   },
   module: {
     rules: [
@@ -17,10 +15,10 @@ module.exports = {
         test: /\.jpe?g$/,
         loaders: [
           {
-            loader: 'lqip-loader',
+            loader: "lqip-loader",
             options: {
-              path: 'src/media', // your image going to be in media folder in the output dir
-              name: '[name].[ext]', // you can use [hash].[ext] too if you wish
+              path: "src/media", // your image going to be in media folder in the output dir
+              name: "[name].[ext]", // you can use [hash].[ext] too if you wish
               base64: true, // default: true, gives the base64 encoded image
               palette: true // default: false, gives the dominant colours palette
             }
@@ -29,12 +27,10 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract(
-          {
-            fallback: 'style-loader',
-            use: ['css-loader', 'sass-loader']
-          }
-        )
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: ["css-loader", "sass-loader"]
+        })
       },
       {
         test: /\.js$/,
@@ -45,57 +41,34 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/'
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/"
+            }
           }
-        }]
+        ]
       }
-      // {
-      //     /**
-      //  * OPTION B:
-      //  * Chained with your own url-loader or file-loader
-      //  **/
-      //   test: /\.(png|jpe?g)$/,
-      //   loaders: [
-      //     {
-      //       loader: 'lqip-loader',
-      //       options: {
-      //         base64: true,
-      //         palette: false
-      //       }
-      //     },
-      //     {
-      //       loader: 'url-loader',
-      //       options: {
-      //         limit: 8000
-      //       }
-      //     }
-      //   ]
-      // }
-    ],
+    ]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: [".js", ".jsx"]
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
+    contentBase: path.join(__dirname, "dist"),
+    compress: true
   },
   plugins: [
-    new CopyWebpackPlugin([
-      { from: 'src/media', to: 'media' },
-      { from: 'src/data', to: 'data' }
-    ]),
-    new ExtractTextPlugin({ filename: 'style.css' }),
+    new CopyWebpackPlugin([{ from: "src/data", to: "data" }]),
+    new ExtractTextPlugin({ filename: "style.css" }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/index.html',
-      filename: 'index.html'
+      template: "./src/index.html",
+      filename: "index.html"
     })
   ]
 };
