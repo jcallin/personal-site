@@ -1,40 +1,10 @@
-@font-face {
-  font-family: 'Open Sans Light';
-  src: local('Open Sans Light'), url('./fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Gloria Hallelujah';
-  src: local('Gloria Hallelujah'), url('./fonts/Gloria_Hallelujah/GloriaHallelujah.ttf') format('truetype');
-}
+@import "navbar";
+@import "components";
+@import "font";
+@import "tiles";
 
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-}
-
-.component {
-  font-family: 'Open Sans Light';
-  display: flex;
-  height: 100%;
-  width: 100%;
-}
-
-.component.first-component {
-  flex-wrap: wrap;
-  margin-top: 70px;
-  align-items: center;
-  background-color: white;
-  justify-content: center;
-  position: relative;
-  p {
-    font-family: 'Gloria Hallelujah';
-    font-size: 40;
-    text-align: center;
-    width: 40%;
-  }
-}
-
-.component.second-component {
-  background-color: red;
 }

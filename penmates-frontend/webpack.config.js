@@ -1,5 +1,6 @@
 // webpack v4
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
@@ -12,6 +13,20 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.jpe?g$/,
+        loaders: [
+          {
+            loader: 'lqip-loader',
+            options: {
+              path: 'src/media', // your image going to be in media folder in the output dir
+              name: '[name].[ext]', // you can use [hash].[ext] too if you wish
+              base64: true, // default: true, gives the base64 encoded image
+              palette: true // default: false, gives the dominant colours palette
+            }
+          }
+        ]
+      },
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract(
@@ -29,15 +44,37 @@ module.exports = {
         }
       },
       {
-          test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-          use: [{
-              loader: 'file-loader',
-              options: {
-                  name: '[name].[ext]',
-                  outputPath: 'fonts/'
-              }
-          }]
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/'
+          }
+        }]
       }
+      // {
+      //     /**
+      //  * OPTION B:
+      //  * Chained with your own url-loader or file-loader
+      //  **/
+      //   test: /\.(png|jpe?g)$/,
+      //   loaders: [
+      //     {
+      //       loader: 'lqip-loader',
+      //       options: {
+      //         base64: true,
+      //         palette: false
+      //       }
+      //     },
+      //     {
+      //       loader: 'url-loader',
+      //       options: {
+      //         limit: 8000
+      //       }
+      //     }
+      //   ]
+      // }
     ],
   },
   resolve: {
@@ -49,7 +86,11 @@ module.exports = {
     compress: true,
   },
   plugins: [
-    new ExtractTextPlugin({filename: 'style.css'}),
+    new CopyWebpackPlugin([
+      { from: 'src/media', to: 'media' },
+      { from: 'src/data', to: 'data' }
+    ]),
+    new ExtractTextPlugin({ filename: 'style.css' }),
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,

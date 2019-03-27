@@ -1,0 +1,21 @@
+@import 'variables';
+
+.landing-image-container {
+  position: relative;
+  text-align: center;
+}
+
+.landing {
+  z-index: map-get($z-layers, 'header');
+}
+
+.main-title {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index:  map-get($z-layers, 'fullscreen');
+}
