@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import NavBar from '../src/components/NavBar'
-import FirstPage from '../src/components/pages/FirstPage';
+import NavBar from "../src/components/NavBar";
+import FirstPage from "../src/components/pages/FirstPage";
 
 class App extends Component {
   constructor(props) {
@@ -9,10 +9,11 @@ class App extends Component {
   }
 
   render() {
-    return <>
-    <NavBar />
-    <FirstPage />
-    </>
+    return (
+      <>
+        <FirstPage />
+      </>
+    );
   }
 }
 
