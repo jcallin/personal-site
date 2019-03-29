@@ -4,6 +4,10 @@ import landing from "../../media/landing.jpg";
 import Tiles from "../Tiles";
 
 const theme = {
+  placeholder: {
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat"
+  },
   img: {
     width: "100%",
     height: "100vh",
@@ -21,8 +25,8 @@ export default () => {
         width={1920}
         height={1080}
         srcSet={[
-          { width: 1000, src: "media/landing.jpg" },
-          { width: 1000, src: "media/landing.webp" }
+          { width: 1000, src: "./media/landing.jpg" },
+          { width: 1000, src: "./media/landing.webp" }
         ]}
       />
       <Tiles />

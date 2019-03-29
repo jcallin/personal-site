@@ -12,12 +12,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jpe?g$/,
+        test: /\.(jpe?g)(\?.*)?$/i,
         loaders: [
           {
             loader: "lqip-loader",
             options: {
-              path: "src/media", // your image going to be in media folder in the output dir
+              path: "/media", // your image going to be in media folder in the output dir
               name: "[name].[ext]", // you can use [hash].[ext] too if you wish
               base64: true, // default: true, gives the base64 encoded image
               palette: true // default: false, gives the dominant colours palette
@@ -62,7 +62,10 @@ module.exports = {
     compress: true
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: "src/data", to: "data" }]),
+    new CopyWebpackPlugin([
+      { from: "src/data", to: "data" },
+      { from: "src/media", to: "media" }
+    ]),
     new ExtractTextPlugin({ filename: "style.css" }),
     new HtmlWebpackPlugin({
       inject: false,

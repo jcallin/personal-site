@@ -24,7 +24,9 @@ Utils.ajax = function(url, successCallback) {
 class Tiles extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      containerWidth: window.innerWidth
+    };
   }
 
   componentWillMount() {
@@ -58,21 +60,21 @@ class Tiles extends React.Component {
       containerWidth: this.state.containerWidth || document.body.clientWidth,
       itemClassName: "item",
       gridWidth: 10,
-      transitionDuration: ".5"
+      transitionDuration: ".5",
+      justifySelf: "center"
     };
   }
 
   calculateItemMargin(containerWidth, numItems, spaceBetweenItems, itemWidth) {
-    // Margin should be 1/2 the width of the remaining space from the total items width
-    // minus the total container width
-    var totalItemWidth =
-      itemWidth * numItems + (numItems - 1) * spaceBetweenItems;
+    // Margin should be 1/2 the width of the remaining space from the total items
+    // on the line width minus the total container width
+    var totalPaddingBetweenItems = (numItems - 1) * spaceBetweenItems;
+    var totalItemWidth = itemWidth * numItems + totalPaddingBetweenItems;
     var itemsOnLine =
       containerWidth > totalItemWidth
         ? numItems
         : Math.floor(containerWidth / itemWidth);
-    var itemsOnLineWidth =
-      itemWidth * itemsOnLine + (numItems - 1) * spaceBetweenItems;
+    var itemsOnLineWidth = itemWidth * itemsOnLine + totalPaddingBetweenItems;
     return (containerWidth - itemsOnLineWidth) / 2;
   }
 
