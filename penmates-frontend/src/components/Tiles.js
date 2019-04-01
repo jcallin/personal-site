@@ -25,6 +25,7 @@ class Tiles extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.updateContainerDimensions = this.updateContainerDimensions.bind(this);
   }
 
   componentWillMount() {
@@ -41,21 +42,23 @@ class Tiles extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener(
-      "resize",
-      () => {
-        this.setState({
-          containerWidth: ReactDOM.findDOMNode(this.refs.container).clientWidth
-        });
-      },
-      false
-    );
+    this.updateContainerDimensions();
+    window.addEventListener("resize", this.updateContainerDimensions);
+  }
+
+  updateContainerDimensions() {
+    var gotWidth = ReactDOM.findDOMNode(this.refs.container);
+    console.log(gotWidth);
+    this.setState({
+      containerWidth:
+        gotWidth === null ? document.body.clientWidth / 2 : gotWidth.clientWidth
+    });
   }
 
   getAutoResponsiveProps() {
     return {
       itemMargin: 10,
-      containerWidth: this.state.containerWidth || document.body.clientWidth,
+      containerWidth: this.state.containerWidth,
       itemClassName: "item",
       gridWidth: 10,
       transitionDuration: ".5",
