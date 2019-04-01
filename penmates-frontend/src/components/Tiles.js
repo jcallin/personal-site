@@ -30,10 +30,12 @@ class Tiles extends React.Component {
   }
 
   updateContainerDimensions() {
-    var gotWidth = ReactDOM.findDOMNode(this.refs.container);
+    var containerNode = ReactDOM.findDOMNode(this.refs.container);
+    var containerUnrendered = containerNode === null;
     this.setState({
-      containerWidth:
-        gotWidth === null ? document.body.clientWidth / 2 : gotWidth.clientWidth
+      containerWidth: containerUnrendered
+        ? document.body.clientWidth / 2
+        : containerNode.clientWidth
     });
   }
 
@@ -96,7 +98,6 @@ class Tiles extends React.Component {
                 <p className="a-layer">
                   <span className="al-brand">{i.brand}</span>
                   <span className="al-title">{i.title}</span>
-                  <span className="al-count">{i.count}件商品</span>
                 </p>
                 <p className="a-more j_ALMore" />
               </a>

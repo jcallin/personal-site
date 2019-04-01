@@ -6,32 +6,28 @@
       "src": "code-outline.svg",
       "hoverSrc": "code-outline.svg",
       "brand": "Projects",
-      "title": "夏日潮女必备",
-      "count": "38"
+      "title": "fun tinkering"
     },
     {
       "w": "w1",
       "src": "share-outline.svg",
       "hoverSrc": "share.svg",
       "brand": "Connect",
-      "title": "",
-      "count": "38"
+      "title": "with me"
     },
     {
       "w": "w1",
       "src": "photo-outline.svg",
       "hoverSrc": "photo.svg",
       "brand": "Photography",
-      "title": "经典旅行穿搭",
-      "count": "38"
+      "title": "some photos"
     },
     {
       "w": "w1",
       "src": "work-outline.svg",
       "hoverSrc": "work.svg",
       "brand": "Work",
-      "title": "经选蕾丝衫情",
-      "count": "38"
+      "title": "professional stuff"
     }
   ]
 }
