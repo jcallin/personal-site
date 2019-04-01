@@ -1,25 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Utils from "../Utils";
 
 import AutoResponsive from "autoresponsive-react";
-
-let Utils = {};
-
-Utils.ajax = function(url, successCallback) {
-  var request = new XMLHttpRequest();
-  request.open("GET", url, true);
-
-  request.onreadystatechange = function() {
-    if (this.readyState === 4) {
-      if (this.status >= 200 && this.status < 400) {
-        successCallback(this.responseText);
-      }
-    }
-  };
-
-  request.send();
-  request = null;
-};
 
 class Tiles extends React.Component {
   constructor(props) {
@@ -48,7 +31,6 @@ class Tiles extends React.Component {
 
   updateContainerDimensions() {
     var gotWidth = ReactDOM.findDOMNode(this.refs.container);
-    console.log(gotWidth);
     this.setState({
       containerWidth:
         gotWidth === null ? document.body.clientWidth / 2 : gotWidth.clientWidth
@@ -90,13 +72,13 @@ class Tiles extends React.Component {
         <AutoResponsive ref="container" {...this.getAutoResponsiveProps()}>
           {this.state.data.map((i, index) => {
             let style = {
-              width: i.w === "w1" ? 190 : 390,
+              width: i.w === "w1" ? 170 : 390,
               height: i.w === "w1" ? 240 : 490,
               marginLeft: `${this.calculateItemMargin(
                 this.state.containerWidth,
                 this.state.data.length,
                 this.getAutoResponsiveProps().itemMargin,
-                190
+                170
               )}px`
             };
             return (
@@ -109,7 +91,6 @@ class Tiles extends React.Component {
                 <img className="a-cont j_ACont" src={`media/${i.hoverSrc}`} />
                 <img className="a-cover" src={`media/${i.src}`} />
                 <p className="a-mask">
-                  {index}
                   <i />
                 </p>
                 <p className="a-layer">

@@ -8,7 +8,7 @@
 }
 .albumPanel {
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   width: 50%;
   height: 50%;
@@ -112,34 +112,19 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 72px;
+  height: 50px;
   width: 100%;
   margin: 0;
   padding: 0;
   background-image: -webkit-linear-gradient(
     top,
-    rgba(240, 234, 228, 0.8) 0%,
-    rgba(240, 234, 228, 1) 17%
-  );
-  background-image: -moz-linear-gradient(
-    top,
-    rgba(240, 234, 228, 0.8) 0%,
-    rgba(240, 234, 228, 1) 17%
-  );
-  background-image: -ms-linear-gradient(
-    top,
-    rgba(240, 234, 228, 0.8) 0%,
-    rgba(240, 234, 228, 1) 17%
-  );
-  background-image: -o-linear-gradient(
-    top,
-    rgba(240, 234, 228, 0.8) 0%,
-    rgba(240, 234, 228, 1) 17%
+    rgba(240, 234, 228, 0.3),
+    rgba(240, 234, 228, 0.9) 33%
   );
   background-image: linear-gradient(
     top,
-    rgba(240, 234, 228, 0.8) 0%,
-    rgba(240, 234, 228, 1) 17%
+    rgba(240, 234, 228, 0.3),
+    rgba(240, 234, 228, 0.9) 33%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#ccf0eae4,endcolorstr=#fff0eae4,gradientType=0);
   -webkit-transition: all 0.3s ease-in;
@@ -237,21 +222,12 @@
   background-color: #999a99;
 }
 .albumPanel .w1,
-.albumPanel .w2 {
-  position: absolute;
-  -webkit-transform: translate(-450px, 999999px);
-  -moz-transform: translate(-450px, 999999px);
-  -ms-transform: translate(-450px, 999999px);
-  -o-transform: translate(-450px, 999999px);
-  transform: translate(-450px, 999999px);
-  -ms-transform: none;
-}
 .albumPanel .w1 {
-  width: 190px;
+  width: 170px;
   height: 240px;
 }
 .albumPanel .w1 img {
-  width: 190px;
+  width: 170px;
 }
 .albumPanel .w1 .al-brand {
   padding-top: 3px;
@@ -306,60 +282,6 @@
   -moz-transform: scale(0.5);
   margin-left: -40px;
   margin-top: -40px;
-}
-.albumPanel .w2 {
-  width: 390px;
-  height: 490px;
-}
-.albumPanel .w2 img {
-  width: 390px;
-}
-.albumPanel .w2 .a-layer {
-  padding: 28px 0 20px;
-}
-.albumPanel .w2 .a-layer .al-title {
-  min-width: 60%;
-}
-.albumPanel .w2:hover .a-mask {
-  background-image: -webkit-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 53%,
-    rgba(0, 0, 0, 0.65) 74%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: -moz-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 53%,
-    rgba(0, 0, 0, 0.65) 74%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: -ms-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 53%,
-    rgba(0, 0, 0, 0.65) 74%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: -o-linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 53%,
-    rgba(0, 0, 0, 0.65) 74%,
-    rgba(0, 0, 0, 1) 81%
-  );
-  background-image: linear-gradient(
-    top,
-    rgba(0, 0, 0, 0) 53%,
-    rgba(0, 0, 0, 0.65) 74%,
-    rgba(0, 0, 0, 1) 81%
-  );
-}
-.albumPanel .w2:hover .a-mask i {
-  background-position: -371px -56px;
-  width: 170px;
-  height: 170px;
-  zoom: 0.5;
-  -moz-transform: scale(0.5);
-  margin-left: -86px;
-  margin-top: -86px;
 }
 .albumPanel .aP-expand,
 .albumPanel .aP-collapse {
@@ -439,13 +361,6 @@
   height: 39px;
   margin-top: 55px;
   margin-left: 55px;
-}
-.ie8 .albumPanel .w2 .a-mask i,
-.ks-ie8 .albumPanel .w2 .a-mask i {
-  width: 85px;
-  height: 85px;
-  margin-top: 110px;
-  margin-left: 110px;
 }
 .ie6 .aP-expand,
 .ks-ie6 .aP-expand,
