@@ -1,2 +1,2 @@
-cd penmates-api
+cd personal-site-api
 npm test

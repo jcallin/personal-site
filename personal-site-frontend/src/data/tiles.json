@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "data": [
+    {
+      "w": "w1",
+      "src": "code-outline.svg",
+      "hoverSrc": "code-outline.svg",
+      "brand": "Projects",
+      "title": "fun tinkering"
+    },
+    {
+      "w": "w1",
+      "src": "share-outline.svg",
+      "hoverSrc": "share.svg",
+      "brand": "Connect",
+      "title": "with me"
+    },
+    {
+      "w": "w1",
+      "src": "photo-outline.svg",
+      "hoverSrc": "photo.svg",
+      "brand": "Photography",
+      "title": "some photos"
+    },
+    {
+      "w": "w1",
+      "src": "work-outline.svg",
+      "hoverSrc": "work.svg",
+      "brand": "Work",
+      "title": "professional stuff"
+    }
+  ]
+}

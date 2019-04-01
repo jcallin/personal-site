@@ -1,13 +1,15 @@
-install: (cd penmates-frontend && yarn install)
+install: (cd personal-site-frontend && yarn install)
 language: node_js
 node_js:
   - "stable"
 cache:
   yarn: true
+  directories:
+    - node_modules
 script:
   - sh build/build_and_test_all.sh
 #deploy:
-  #  provider: surge
-  #  skip_cleanup: true
-  #  domain: <my_name_here>.surge.sh
-  #  project: ./build/
+#  provider: surge
+#  skip_cleanup: true
+#  domain: <my_name_here>.surge.sh
+#  project: ./build/
