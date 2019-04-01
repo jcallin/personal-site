@@ -24,9 +24,7 @@ Utils.ajax = function(url, successCallback) {
 class Tiles extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      containerWidth: window.innerWidth
-    };
+    this.state = {};
   }
 
   componentWillMount() {
@@ -65,17 +63,18 @@ class Tiles extends React.Component {
     };
   }
 
-  calculateItemMargin(containerWidth, numItems, spaceBetweenItems, itemWidth) {
+  calculateItemMargin(containerWidth, numItems, itemMarginLeft, itemWidth) {
     // Margin should be 1/2 the width of the remaining space from the total items
     // on the line width minus the total container width
-    var totalPaddingBetweenItems = (numItems - 1) * spaceBetweenItems;
-    var totalItemWidth = itemWidth * numItems + totalPaddingBetweenItems;
+    var eachItemWidth = itemWidth + itemMarginLeft;
+    var totalItemWidth = eachItemWidth * numItems;
+
     var itemsOnLine =
-      containerWidth > totalItemWidth
+      containerWidth + 10 > totalItemWidth
         ? numItems
-        : Math.floor(containerWidth / itemWidth);
-    var itemsOnLineWidth = itemWidth * itemsOnLine + totalPaddingBetweenItems;
-    return (containerWidth - itemsOnLineWidth) / 2;
+        : Math.floor(containerWidth / eachItemWidth);
+    var itemsOnLineWidth = eachItemWidth * itemsOnLine;
+    return (containerWidth - itemsOnLineWidth) / 2 + 5;
   }
 
   render() {
