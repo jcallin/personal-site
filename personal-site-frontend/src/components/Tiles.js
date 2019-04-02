@@ -96,10 +96,8 @@ class Tiles extends React.Component {
                   <i />
                 </p>
                 <p className="a-layer">
-                  <span className="al-brand">{i.brand}</span>
                   <span className="al-title">{i.title}</span>
                 </p>
-                <p className="a-more j_ALMore" />
               </a>
             );
           })}

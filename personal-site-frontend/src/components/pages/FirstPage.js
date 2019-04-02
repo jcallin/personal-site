@@ -18,7 +18,7 @@ const theme = {
 export default () => {
   return (
     <div className="landing-container">
-      {/* <h2 className="main-title">Julian Callin</h2> */}
+      <h2 className="main-title">Julian Callin</h2>
       <IdealImage
         className="landing-image"
         theme={theme}

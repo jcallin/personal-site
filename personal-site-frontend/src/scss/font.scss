@@ -1,8 +1,11 @@
 @font-face {
-  font-family: 'Open Sans Light';
-  src: local('Open Sans Light'), url('./fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
+  font-family: "Open Sans Bold";
+  src: local("Open Sans Light"),
+    url("./fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: 'Gloria Hallelujah';
-  src: local('Gloria Hallelujah'), url('./fonts/Gloria_Hallelujah/GloriaHallelujah.ttf') format('truetype');
+  font-family: "Signika Semi Bold";
+  src: local("Signika Semi Bold"),
+    url("./fonts/Signika/Signika-SemiBold.ttf") format("truetype");
 }
