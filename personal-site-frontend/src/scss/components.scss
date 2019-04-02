@@ -11,13 +11,33 @@
 }
 
 .main-title {
-  color: white;
+  background-color: rgba($color: black, $alpha: 0.5);
   position: absolute;
-  top: 20%;
+  color: white;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: map-get($z-layers, "fullscreen");
   font-family: "Signika Semi Bold";
   font-size: "50px";
+}
+
+.main-title:before {
+  display: inline-block;
+  margin: 0 20px 8px 20px;
+  height: 3px;
+  content: " ";
+  text-shadow: none;
+  background-color: #999;
+  width: 140px;
+}
+.main-title:after {
+  display: inline-block;
+  margin: 0 20px 8px 20px;
+  height: 3px;
+  content: " ";
+  text-shadow: none;
+  background-color: #999;
+  width: 140px;
 }
