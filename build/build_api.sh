@@ -1,2 +1,1 @@
-cd personal-site-api
-npm run build
+yarn run build:prod

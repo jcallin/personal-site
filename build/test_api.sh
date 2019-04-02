@@ -1,2 +1,1 @@
-cd personal-site-api
-npm test
+yarn test

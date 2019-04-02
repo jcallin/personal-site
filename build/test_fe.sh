@@ -1,2 +1,1 @@
-cd personal-site-frontend
-npm run test
+yarn test

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Tests are empty\" && exit 0",
-    "build": "echo \"No build configured yet\" && exit 0"
+    "build:prod": "echo \"No build configured yet\" && exit 0"
   },
   "repository": {
     "type": "git",
