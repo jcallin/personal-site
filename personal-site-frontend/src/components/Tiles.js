@@ -90,8 +90,8 @@ class Tiles extends React.Component {
                 className={`${i.w} album item`}
                 style={style}
               >
-                <img className="a-cont j_ACont" src={`media/${i.hoverSrc}`} />
-                <img className="a-cover" src={`media/${i.src}`} />
+                <img className="a-cover" src={`media/${i.hoverSrc}`} />
+                <img className="a-content" src={`media/${i.src}`} />
                 <p className="a-mask">
                   <i />
                 </p>

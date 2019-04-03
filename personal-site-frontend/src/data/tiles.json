@@ -3,26 +3,26 @@
   "data": [
     {
       "w": "w1",
-      "src": "code-outline.svg",
-      "hoverSrc": "code-outline.svg",
-      "title": "Projects"
+      "src": "about-outline.svg",
+      "hoverSrc": "about.svg",
+      "title": "About"
     },
     {
       "w": "w1",
-      "src": "work-outline.svg",
-      "hoverSrc": "work.svg",
+      "src": "professional-outline.svg",
+      "hoverSrc": "professional-outline.svg",
       "title": "Professional"
     },
     {
       "w": "w1",
-      "src": "photo-outline.svg",
-      "hoverSrc": "photo.svg",
+      "src": "photography-outline.svg",
+      "hoverSrc": "photography.svg",
       "title": "Photography"
     },
     {
       "w": "w1",
-      "src": "share-outline.svg",
-      "hoverSrc": "share.svg",
+      "src": "connect-outline.svg",
+      "hoverSrc": "connect.svg",
       "title": "Connect"
     }
   ]
