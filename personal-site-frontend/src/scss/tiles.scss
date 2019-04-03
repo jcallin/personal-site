@@ -20,27 +20,6 @@
   line-height: 1.5;
   margin: auto;
 }
-.albumPanel .aP-hd {
-  text-align: center;
-  color: #6d5c53;
-}
-.albumPanel .aP-hd i {
-  background-position: -294px 0;
-  display: inline-block;
-  width: 18px;
-  height: 17px;
-  margin-bottom: -4px;
-  margin-right: 5px;
-}
-.albumPanel .aP-hd b {
-  background-position: -294px -30px;
-  display: inline-block;
-  width: 127px;
-  height: 18px;
-  color: transparent;
-  margin-left: 15px;
-  vertical-align: middle;
-}
 .albumPanel .aP-hd b s {
   display: none;
 }
@@ -48,45 +27,35 @@
 .albumPanel .album {
   display: block;
   overflow: hidden;
-  text-decoration: none;
 }
-.albumPanel .album img {
-  border: none;
-}
-.albumPanel .album .a-cont,
 // First image before hover
-.albumPanel .album .a-cover {
+.albumPanel .album .a-content {
+  opacity: 1;
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-transition: opacity 0.3s ease-in;
-  -moz-transition: opacity 0.3s ease-in;
-  -ms-transition: opacity 0.3s ease-in;
-  -o-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
 }
-.albumPanel .album .a-cover {
-  opacity: 1;
-}
-.albumPanel .album .a-cont {
+.albumPanel .album:hover .a-content {
   opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+  -ms-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
 }
-.albumPanel .album:hover {
-  text-decoration: none;
+// Image on hover
+.albumPanel .album .a-cover {
+  opacity: 0;
 }
 .albumPanel .album:hover .a-cover {
-  opacity: 0;
-}
-.albumPanel .album:hover .a-cont {
   opacity: 1;
-}
-.albumPanel .album:hover .a-mask i {
-  opacity: 1;
-  -webkit-transition: opacity 0.2s ease-in 0.3s;
-  -moz-transition: opacity 0.2s ease-in 0.3s;
-  -ms-transition: opacity 0.2s ease-in 0.3s;
-  -o-transition: opacity 0.2s ease-in 0.3s;
-  transition: opacity 0.2s ease-in 0.3s;
+  margin: -10px;
+  overflow: hidden;
+  -webkit-transition: opacity 0.2s ease-in, margin 0.5s ease-out;
+  -moz-transition: opacity 0.2s ease-in, margin 0.5s ease-out;
+  -ms-transition: opacity 0.2s ease-in, margin 0.5s ease-out;
+  -o-transition: opacity 0.2s ease-in, margin 0.5s ease-out;
+  transition: opacity 0.2s ease-in, margin 0.5s ease-out;
 }
 .albumPanel .album .a-mask {
   position: absolute;
@@ -173,7 +142,6 @@
     rgba(255, 255, 255, 0)
   );
 }
-.albumPanel .album .a-layer .al-brand,
 .albumPanel .album .a-layer .al-title {
   -webkit-transition: all 0.5s ease-in 0.1s;
   -moz-transition: all 0.5s ease-in 0.1s;
