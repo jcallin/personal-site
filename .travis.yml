@@ -11,6 +11,6 @@ script:
 deploy:
   provider: surge
   domain: juliancallin.com
-  project: ./dist/
+  project: personal-site-frontend/dist/
   skip_cleanup: true
   on: release
