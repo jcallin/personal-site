@@ -17,7 +17,7 @@ const theme = {
 
 export default () => {
   return (
-    <div className="landing-container">
+    <div className="first-page">
       <h2 className="main-title">Julian Callin</h2>
       <IdealImage
         className="landing-image"

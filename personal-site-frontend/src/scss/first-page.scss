@@ -1,6 +1,6 @@
 @import "variables";
 
-.landing-container {
+.first-page {
   position: relative;
   text-align: center;
 }
@@ -11,7 +11,7 @@
 }
 
 .main-title {
-  background-color: rgba($color: black, $alpha: 0.5);
+  background-color: rgba($color: black, $alpha: 0.4);
   position: absolute;
   color: white;
   top: 25%;
@@ -20,7 +20,8 @@
   text-align: center;
   z-index: map-get($z-layers, "fullscreen");
   font-family: "Signika Semi Bold";
-  font-size: "50px";
+  font-size: 40px;
+  width: 500px;
 }
 
 .main-title:before {
@@ -30,7 +31,7 @@
   content: " ";
   text-shadow: none;
   background-color: #999;
-  width: 140px;
+  width: 100px;
 }
 .main-title:after {
   display: inline-block;
@@ -39,5 +40,5 @@
   content: " ";
   text-shadow: none;
   background-color: #999;
-  width: 140px;
+  width: 100px;
 }
