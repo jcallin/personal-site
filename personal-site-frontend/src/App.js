@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import FirstPage from "./components/pages/FirstPage";
+import SecondPage from "./components/pages/SecondPage";
 
 class App extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class App extends Component {
     return (
       <>
         <FirstPage />
+        <SecondPage />
       </>
     );
   }
