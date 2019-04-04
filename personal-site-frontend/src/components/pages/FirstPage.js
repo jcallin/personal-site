@@ -10,7 +10,7 @@ const theme = {
   },
   img: {
     width: "100%",
-    height: "100vh",
+    height: "100%",
     objectFit: "cover"
   }
 };
@@ -18,7 +18,7 @@ const theme = {
 export default () => {
   return (
     <div className="first-page">
-      <h2 className="main-title">Julian Callin</h2>
+      <h2 className="main-title h2">Julian Callin</h2>
       <IdealImage
         className="landing-image"
         theme={theme}
