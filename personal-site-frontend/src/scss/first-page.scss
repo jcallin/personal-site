@@ -2,24 +2,22 @@
 
 .first-page {
   position: relative;
-  text-align: center;
+  overflow: hidden;
 }
 
 .landing-image {
-  overflow: hidden;
   z-index: map-get($z-layers, "header");
 }
 
 .main-title {
   background-color: rgba($color: black, $alpha: 0.4);
   position: absolute;
-  color: white;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: map-get($z-layers, "fullscreen");
-  font-family: "Signika Semi Bold";
+  color: white;
   font-size: 40px;
   width: 500px;
 }
