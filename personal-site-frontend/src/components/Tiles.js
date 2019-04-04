@@ -34,7 +34,7 @@ class Tiles extends React.Component {
     var containerUnrendered = containerNode === null;
     this.setState({
       containerWidth: containerUnrendered
-        ? document.body.clientWidth / 2
+        ? document.body.clientWidth / 1.95
         : containerNode.clientWidth
     });
   }
