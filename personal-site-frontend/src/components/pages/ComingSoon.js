@@ -1,30 +1,11 @@
-import IdealImage from "react-ideal-image";
-import landing from "../../media/landing.jpg";
 import React from "react";
-
-const theme = {
-  placeholder: {
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat"
-  },
-  img: {
-    width: "100%",
-    height: "100vh",
-    objectFit: "cover"
-  }
-};
+import LandingImage from "../LandingImage";
 
 const ComingSoon = () => {
   return (
     <>
-      <h2 className="under-construction h2">Under Construction</h2>
-      <IdealImage
-        theme={theme}
-        placeholder={{ lqip: landing.preSrc }}
-        width={1920}
-        height={1080}
-        srcSet={[]}
-      />
+      <h2 className="coming-soon h2">Coming Soon</h2>
+      <LandingImage srcSet={[""]} />
     </>
   );
 };
