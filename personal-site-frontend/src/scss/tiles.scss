@@ -18,6 +18,7 @@
   line-height: 1.5;
   margin: auto;
 }
+
 .albumPanel .aP-hd b s {
   display: none;
 }
@@ -140,14 +141,14 @@
     rgba(255, 255, 255, 0)
   );
 }
+
+// Text inside tiles
 .albumPanel .album .a-layer .al-title {
-  -webkit-transition: all 0.5s ease-in 0.1s;
-  -moz-transition: all 0.5s ease-in 0.1s;
-  -ms-transition: all 0.5s ease-in 0.1s;
-  -o-transition: all 0.5s ease-in 0.1s;
-  transition: all 0.5s ease-in 0.1s;
-}
-.albumPanel .album .a-layer .al-title {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
   display: inline-block;
   color: black;
   text-decoration: none;
@@ -158,6 +159,16 @@
   white-space: nowrap;
   // overflow: hidden; //
 }
+
+.albumPanel .album:hover .a-layer .al-title {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #464646;
+}
+
 .albumPanel .album:hover .a-mask {
   filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00000000,endcolorstr=#FF000000,gradientType=0);
   background-color: transparent;
@@ -166,10 +177,7 @@
   background: none;
   filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#00000000,endcolorstr=#00000000,gradientType=0);
 }
-// Text inside tiles
-.albumPanel .album:hover .a-layer .al-title {
-  color: black;
-}
+
 .albumPanel .w1 {
   width: 170px;
   height: 240px;
