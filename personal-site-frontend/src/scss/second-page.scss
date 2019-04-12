@@ -1,2 +1,45 @@
 .second-page {
+  .second-title {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: map-get($z-layers, "fullscreen");
+    color: black;
+    font-size: 40px;
+    margin-top: 100px;
+    width: 500px;
+  }
+
+  .second-title:before {
+    display: inline-block;
+    margin: 0 20px 8px 20px;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #999;
+    width: 100px;
+  }
+  .second-title:after {
+    display: inline-block;
+    margin: 0 20px 8px 20px;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #999;
+    width: 100px;
+  }
+
+  .subtitle {
+    position: relative;
+    text-align: center;
+    color: $cgrey;
+    font-size: 25px;
+  }
+
+  .description {
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+  }
 }

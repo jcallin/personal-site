@@ -3,8 +3,8 @@ import Tiles from "../Tiles";
 import LandingImage from "../LandingImage";
 
 const images = [
-  { width: 1000, src: "./media/landing.jpg" },
-  { width: 1000, src: "./media/landing.webp" }
+  { width: 1920, src: "./media/landing.jpg" },
+  { width: 1920, src: "./media/landing.webp" }
 ];
 
 export default () => {
