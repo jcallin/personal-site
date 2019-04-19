@@ -2,6 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Utils from "../Utils";
 
+import About from "../media/about.svg";
+import Professional from "../media/professional-outline.svg";
+import Photography from "../media/photography.svg";
+import Connect from "../media/connect.svg";
+
+import AboutO from "../media/about-outline.svg";
+import ProfessionalO from "../media/professional-outline.svg";
+import PhotographyO from "../media/photography-outline.svg";
+import ConnectO from "../media/connect-outline.svg";
+
 import AutoResponsive from "autoresponsive-react";
 
 class Tiles extends React.Component {
@@ -12,7 +22,34 @@ class Tiles extends React.Component {
   }
 
   componentWillMount() {
-    this.getData();
+    this.setState({
+      data: [
+        {
+          w: "w1",
+          src: AboutO,
+          hoverSrc: About,
+          title: "About"
+        },
+        {
+          w: "w1",
+          src: ProfessionalO,
+          hoverSrc: Professional,
+          title: "Professional"
+        },
+        {
+          w: "w1",
+          src: PhotographyO,
+          hoverSrc: Photography,
+          title: "Photography"
+        },
+        {
+          w: "w1",
+          src: ConnectO,
+          hoverSrc: Connect,
+          title: "Connect"
+        }
+      ]
+    });
   }
 
   getData() {
