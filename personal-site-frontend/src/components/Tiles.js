@@ -52,15 +52,6 @@ class Tiles extends React.Component {
     });
   }
 
-  getData() {
-    Utils.ajax("./data/tiles.json", d => {
-      let data = JSON.parse(d).data;
-      this.setState({
-        data: data
-      });
-    });
-  }
-
   componentDidMount() {
     this.updateContainerDimensions();
     window.addEventListener("resize", this.updateContainerDimensions);
