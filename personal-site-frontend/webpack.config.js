@@ -23,10 +23,10 @@ module.exports = (env, argv) => {
     module: {
       rules: [
         {
-          test: /\.(png|svg|jpg|gif|webp)$/,
+          test: /\.(jpe?g|png|gif|svg|webp)$/i,
           use: [
             {
-              loader: "file-loader",
+              loader: "url-loader",
               options: {
                 emitFile: dev ? true : false,
                 outputPath: "media/",
@@ -53,7 +53,7 @@ module.exports = (env, argv) => {
           test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
           use: [
             {
-              loader: "file-loader",
+              loader: "url-loader",
               options: {
                 emitFile: dev ? true : false,
                 name: "[name].[ext]",

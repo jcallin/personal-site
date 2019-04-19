@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Utils from "../Utils";
 
 import About from "../media/about.svg";
 import Professional from "../media/professional-outline.svg";
@@ -118,8 +117,8 @@ class Tiles extends React.Component {
                 className={`${i.w} album item`}
                 style={style}
               >
-                <img className="a-cover" src={`media/${i.hoverSrc}`} />
-                <img className="a-content" src={`media/${i.src}`} />
+                <img className="a-cover" src={i.hoverSrc} />
+                <img className="a-content" src={i.src} />
                 <p className="a-mask">
                   <i />
                 </p>

@@ -1,6 +1,5 @@
 import React from "react";
 import IdealImage from "react-ideal-image";
-import Landing from "../media/landing-lqip.jpg";
 
 const theme = {
   placeholder: {
@@ -19,7 +18,7 @@ function LandingImage(props) {
     <IdealImage
       className="landing-image"
       theme={theme}
-      placeholder={{ lqip: Landing.preSrc }}
+      placeholder={{ lqip: "" }}
       width={1920}
       height={1080}
       srcSet={props.srcSet}
