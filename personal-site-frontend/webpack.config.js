@@ -7,6 +7,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = (env, argv) => {
   const dev = argv.mode === "development";
   const release = process.env.RELEASE ? true : false;
+  console.log(
+    `Build mode is: ${argv.mode}\nThis ${
+      release ? "is " : "is not "
+    }a release deployment`
+  );
 
   return {
     devtool: "inline-source-map",
@@ -18,7 +23,8 @@ module.exports = (env, argv) => {
     entry: ["./src/index.js"],
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: "bundle.js"
+      filename: "bundle.js",
+      publicPath: dev ? "/" : "https://assets.juliancallin.com/"
     },
     module: {
       rules: [
