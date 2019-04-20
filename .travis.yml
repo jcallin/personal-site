@@ -10,7 +10,6 @@ script:
   - sh build/build_and_test_all.sh
 deploy:
   provider: surge
-  domain: juliancallin.com
   project: personal-site-frontend/dist/
   skip_cleanup: true
   on: release
