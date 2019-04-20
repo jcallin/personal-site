@@ -1,6 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Utils from "../Utils";
+
+import About from "../media/about.svg";
+import Professional from "../media/professional-outline.svg";
+import Photography from "../media/photography.svg";
+import Connect from "../media/connect.svg";
+
+import AboutO from "../media/about-outline.svg";
+import ProfessionalO from "../media/professional-outline.svg";
+import PhotographyO from "../media/photography-outline.svg";
+import ConnectO from "../media/connect-outline.svg";
 
 import AutoResponsive from "autoresponsive-react";
 
@@ -12,15 +21,33 @@ class Tiles extends React.Component {
   }
 
   componentWillMount() {
-    this.getData();
-  }
-
-  getData() {
-    Utils.ajax("./data/tiles.json", d => {
-      let data = JSON.parse(d).data;
-      this.setState({
-        data: data
-      });
+    this.setState({
+      data: [
+        {
+          w: "w1",
+          src: AboutO,
+          hoverSrc: About,
+          title: "About"
+        },
+        {
+          w: "w1",
+          src: ProfessionalO,
+          hoverSrc: Professional,
+          title: "Professional"
+        },
+        {
+          w: "w1",
+          src: PhotographyO,
+          hoverSrc: Photography,
+          title: "Photography"
+        },
+        {
+          w: "w1",
+          src: ConnectO,
+          hoverSrc: Connect,
+          title: "Connect"
+        }
+      ]
     });
   }
 
@@ -90,8 +117,8 @@ class Tiles extends React.Component {
                 className={`${i.w} album item`}
                 style={style}
               >
-                <img className="a-cover" src={`media/${i.hoverSrc}`} />
-                <img className="a-content" src={`media/${i.src}`} />
+                <img className="a-cover" src={i.hoverSrc} />
+                <img className="a-content" src={i.src} />
                 <p className="a-mask">
                   <i />
                 </p>
