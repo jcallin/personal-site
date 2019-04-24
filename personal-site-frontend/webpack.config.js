@@ -6,12 +6,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (env, argv) => {
   const dev = argv.mode === "development";
-  const release = process.env.RELEASE ? true : false;
-  console.log(
-    `Build mode is: ${argv.mode}\nThis ${
-      release ? "is " : "is not "
-    }a release deployment`
-  );
+  console.log(`Build mode is: ${argv.mode}`);
 
   return {
     devtool: "inline-source-map",
@@ -76,7 +71,7 @@ module.exports = (env, argv) => {
     plugins: [
       new CopyWebpackPlugin([
         { from: "src/data", to: "data" },
-        { from: "src/surge-assets/" + (release ? "prod" : "dev"), to: "" }
+        { from: "src/surge-assets/" + (dev ? "dev" : "prod"), to: "" }
       ]),
       new ExtractTextPlugin({ filename: "style.css" }),
       new HtmlWebpackPlugin({

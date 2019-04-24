@@ -43,6 +43,7 @@
   },
   "scripts": {
     "build:prod": "webpack --mode production",
+    "build:dev": "webpack --mode development",
     "start:dev": "webpack-dev-server --display-error-details --open --mode development",
     "test": "jest --passWithNoTests"
   },
