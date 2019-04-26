@@ -7,8 +7,6 @@ cache:
     - node_modules
 script:
   - sh build/build_and_test_all.sh
-deploy:
-  provider: surge
-  project: personal-site-frontend/dist/
-  skip_cleanup: true
-  on: release
+
+after_script:
+  - sh deploy/deploy.sh
