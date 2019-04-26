@@ -1,4 +1,4 @@
-install: (cd personal-site-frontend && npm install)
+install: build/install.sh
 language: node_js
 node_js:
   - "stable"
