@@ -1,4 +1,4 @@
-install: build/install.sh
+install: sh build/install.sh
 language: node_js
 node_js:
   - "stable"
