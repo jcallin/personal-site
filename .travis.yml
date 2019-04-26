@@ -1,9 +1,8 @@
-install: (cd personal-site-frontend && yarn install)
+install: sh build/install.sh
 language: node_js
 node_js:
-  - "stable"
+  - "11"
 cache:
-  yarn: true
   directories:
     - node_modules
 script:

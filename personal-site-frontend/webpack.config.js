@@ -70,7 +70,6 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new CopyWebpackPlugin([
-        { from: "src/data", to: "data" },
         { from: "src/surge-assets/" + (dev ? "dev" : "prod"), to: "" }
       ]),
       new ExtractTextPlugin({ filename: "style.css" }),
