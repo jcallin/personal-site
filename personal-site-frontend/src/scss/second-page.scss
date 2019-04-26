@@ -56,10 +56,15 @@
     grid-auto-rows: minmax(100px, auto);
     font-size: 16px;
 
-    .here-logo {
-      width: 200px;
+    .left-column {
       align-self: center;
       justify-self: center;
+    }
+    .right-column {
+    }
+
+    .here-logo {
+      width: 200px;
     }
   }
 }
