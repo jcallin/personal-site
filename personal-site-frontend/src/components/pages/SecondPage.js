@@ -17,8 +17,8 @@ const SecondPage = () => {
         alias praesentium illo excepturi ad!
       </div>
       <div className="experience-table">
-        <img className="here-logo" src={HERELogo} />
-        <div className="HERE-technologies">
+        <img className="left-column here-logo" src={HERELogo} />
+        <div className="right-column">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
           repudiandae laborum odio libero soluta ratione hic magni deserunt,
           perspiciatis, minima autem itaque, cupiditate ab nihil recusandae
@@ -31,11 +31,28 @@ const SecondPage = () => {
           assumenda aliquam earum? Asperiores reprehenderit libero magnam
           dolorum ipsam quas, rerum tempora et assumenda eaque.
         </div>
-        <div className="HERE-technologies">
+        <div className="left-column">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
           quibusdam suscipit hic nostrum exercitationem similique.
         </div>
-        <div className="HERE-technologies">
+        <div className="right-column">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
+          repudiandae laborum odio libero soluta ratione hic magni deserunt,
+          perspiciatis, minima autem itaque, cupiditate ab nihil recusandae
+          eaque pariatur! Et eaque dolorum omnis earum, hic id rem consequuntur
+          expedita mollitia? Quod consectetur magnam, voluptates animi magni
+          illo facilis. Ullam ab ad beatae id soluta quam sequi aspernatur omnis
+          illo inventore nobis porro ut est alias, aliquid corrupti dolorum odit
+          accusantium sunt mollitia iure fugit, voluptatem ea. Similique,
+          expedita quas corporis labore nulla veritatis delectus ex repudiandae
+          assumenda aliquam earum? Asperiores reprehenderit libero magnam
+          dolorum ipsam quas, rerum tempora et assumenda eaque.
+        </div>
+        <div className="left-column">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+          quibusdam suscipit hic nostrum exercitationem similique.
+        </div>
+        <div className="right-column">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
           repudiandae laborum odio libero soluta ratione hic magni deserunt,
           perspiciatis, minima autem itaque, cupiditate ab nihil recusandae
