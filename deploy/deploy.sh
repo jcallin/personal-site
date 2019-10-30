@@ -1,4 +1,4 @@
-if [ ! -d "dist" ]; then
+if [ ! -d "personal-site-frontend/dist" ]; then
     echo "Cannot deploy project because it has not been built to the 'dist' folder yet. Please build the project first."
     exit 1
 fi
@@ -12,4 +12,4 @@ else
 fi
 
 echo "Deploying to $domain"
-surge --project ./dist --domain "$domain"
+surge --project ./personal-site-frontend/dist --domain "$domain"
