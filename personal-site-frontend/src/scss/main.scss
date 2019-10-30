@@ -3,16 +3,18 @@
 @import "variables";
 
 // Pages
-@import "coming-soon";
-@import "first-page";
+@import "pages/coming-soon";
+@import "pages/first-page";
+@import "pages/second-page";
+@import "pages/third-page";
 @import "tiles";
-@import "second-page";
 
 // Unify theme across the site
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .common-header {
   font-family: "Signika Semi Bold";
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
