@@ -36,10 +36,10 @@ const IMAGES = [
 
 const ThirdPage = () => {
   return (
-    <div className="third-page">
+    <div className="photography">
       <p className="description">Here are some photos</p>
       <Gallery
-        className="third-page"
+        className="photography"
         images={IMAGES}
         enableImageSelection={false}
         rowHeight="300"
