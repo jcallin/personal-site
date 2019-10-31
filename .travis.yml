@@ -9,4 +9,5 @@ script:
   - sh build/build_and_test_all.sh
 
 after_script:
+  - npm install -g surge
   - sh deploy/deploy.sh
