@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import About from "../media/about.svg";
-import Professional from "../media/professional-outline.svg";
-import Photography from "../media/photography.svg";
-import Connect from "../media/connect.svg";
+import About from "../../media/about.svg";
+import Professional from "../../media/professional-outline.svg";
+import Photography from "../../media/photography.svg";
+import Connect from "../../media/connect.svg";
 
-import AboutO from "../media/about-outline.svg";
-import ProfessionalO from "../media/professional-outline.svg";
-import PhotographyO from "../media/photography-outline.svg";
-import ConnectO from "../media/connect-outline.svg";
+import AboutO from "../../media/about-outline.svg";
+import ProfessionalO from "../../media/professional-outline.svg";
+import PhotographyO from "../../media/photography-outline.svg";
+import ConnectO from "../../media/connect-outline.svg";
 
 import AutoResponsive from "autoresponsive-react";
 

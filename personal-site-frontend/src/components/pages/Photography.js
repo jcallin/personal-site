@@ -1,7 +1,7 @@
 import React from "react";
 import Gallery from "react-grid-gallery";
 
-import Ted from "../../media/photography/ted.jpg";
+import Ted from "../../../media/photography/ted.jpg";
 
 const IMAGES = [
   {

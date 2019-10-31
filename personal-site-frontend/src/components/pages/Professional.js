@@ -1,6 +1,6 @@
 import React from "react";
 
-import HERELogo from "../../media/HERE-logo.png";
+import HERELogo from "../../../media/HERE-logo.png";
 
 const SecondPage = () => {
   return (
