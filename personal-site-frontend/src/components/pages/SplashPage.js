@@ -2,8 +2,8 @@ import React from "react";
 import Tiles from "../Tiles";
 import LandingImage from "../LandingImage";
 
-import LandingWebp from "../../media/landing.webp";
-import LandingJpg from "../../media/landing.jpg";
+import LandingWebp from "../../../media/landing.webp";
+import LandingJpg from "../../../media/landing.jpg";
 
 const images = [
   { width: 1920, src: LandingWebp },
