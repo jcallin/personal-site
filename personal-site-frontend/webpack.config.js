@@ -18,8 +18,7 @@ module.exports = (env, argv) => {
     entry: ["./src/index.js"],
     output: {
       path: path.resolve(__dirname, "dist"),
-      filename: "bundle.js",
-      publicPath: dev ? "/" : "https://assets.juliancallin.com/"
+      filename: "bundle.js"
     },
     module: {
       rules: [
@@ -27,11 +26,11 @@ module.exports = (env, argv) => {
           test: /\.(jpe?g|png|gif|svg|webp)$/i,
           use: [
             {
-              loader: "url-loader",
+              loader: "file-loader",
               options: {
                 emitFile: dev ? true : false,
-                outputPath: "media/",
-                name: "[name].[ext]"
+                publicPath: dev ? "./" : "https://assets.juliancallin.com/",
+                name: "[path][name].[ext]"
               }
             }
           ]
@@ -54,12 +53,7 @@ module.exports = (env, argv) => {
           test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
           use: [
             {
-              loader: "url-loader",
-              options: {
-                emitFile: dev ? true : false,
-                name: "[name].[ext]",
-                outputPath: "fonts/"
-              }
+              loader: "url-loader"
             }
           ]
         }
@@ -69,9 +63,6 @@ module.exports = (env, argv) => {
       extensions: [".js", ".jsx"]
     },
     plugins: [
-      new CopyWebpackPlugin([
-        { from: "src/deploy/surge-assets/" + (dev ? "dev" : "prod"), to: "" }
-      ]),
       new ExtractTextPlugin({ filename: "style.css" }),
       new HtmlWebpackPlugin({
         inject: false,
