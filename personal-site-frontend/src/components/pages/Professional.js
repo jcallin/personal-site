@@ -4,8 +4,8 @@ import HERELogo from "../../media/HERE-logo.png";
 
 const SecondPage = () => {
   return (
-    <div className="second-page">
-      <div className="second-title common-header">Julian Callin</div>
+    <div className="professional">
+      <div className="title common-header">Julian Callin</div>
       <div className="subtitle common-header">Lorem, ipsum</div>
       <br />
       <div className="description">

@@ -1,9 +1,6 @@
-.second-page {
-  font-family: "Signika Regular";
-  margin-right: 10%;
-  margin-left: 10%;
-
-  .second-title {
+.professional {
+  @extend .shared;
+  .title {
     position: relative;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -15,7 +12,7 @@
     width: 500px;
   }
 
-  .second-title:before {
+  .title:before {
     display: inline-block;
     margin: 0 20px 8px 20px;
     height: 3px;
@@ -24,7 +21,7 @@
     background-color: #999;
     width: 100px;
   }
-  .second-title:after {
+  .title:after {
     display: inline-block;
     margin: 0 20px 8px 20px;
     height: 3px;
@@ -32,19 +29,6 @@
     text-shadow: none;
     background-color: #999;
     width: 100px;
-  }
-
-  .subtitle {
-    position: relative;
-    text-align: center;
-    color: $cgrey;
-    font-size: 25px;
-  }
-
-  .description {
-    position: relative;
-    text-align: center;
-    font-size: 20px;
   }
 
   .experience-table {

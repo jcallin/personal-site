@@ -3,11 +3,12 @@
 @import "variables";
 
 // Pages
-@import "pages/coming-soon";
-@import "pages/first-page";
-@import "pages/second-page";
-@import "pages/third-page";
-@import "tiles";
+@import "shared";
+@import "components/pages/coming-soon";
+@import "components/pages/splash-page";
+@import "components/pages/professional";
+@import "components/pages/photography";
+@import "components/tiles";
 
 // Unify theme across the site
 * {
