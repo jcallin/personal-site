@@ -16,12 +16,7 @@ import AutoResponsive from "autoresponsive-react";
 class Tiles extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    this.updateContainerDimensions = this.updateContainerDimensions.bind(this);
-  }
-
-  componentWillMount() {
-    this.setState({
+    this.state = {
       data: [
         {
           w: "w1",
@@ -48,7 +43,8 @@ class Tiles extends React.Component {
           title: "Connect"
         }
       ]
-    });
+    };
+    this.updateContainerDimensions = this.updateContainerDimensions.bind(this);
   }
 
   componentDidMount() {
